@@ -9,7 +9,7 @@ class YoutubeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 SizedBox(
                   width: 10,
@@ -86,14 +86,14 @@ class YoutubeScreen extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Column(
               children: [
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -103,54 +103,54 @@ class YoutubeScreen extends StatelessWidget {
                         color: const Color.fromARGB(255, 231, 32, 17),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Center(
+                      child: const Center(
                           child: Icon(
                         Icons.play_arrow,
                         size: 30,
                         color: Colors.white,
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
-                    Text(
+                    const Text(
                       "YouTube",
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
-                    Spacer(),
-                    Icon(
+                    const Spacer(),
+                    const Icon(
                       Icons.cast,
                       size: 20,
                       color: Colors.black,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.notifications,
                       size: 20,
                       color: Colors.black,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.search,
                       size: 20,
                       color: Colors.black,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -160,9 +160,9 @@ class YoutubeScreen extends StatelessWidget {
                           // image: DecorationImage(
                           //   image: AssetImage("flower/youtube 3.jpg"),
                           // ),
-                          color: Color.fromARGB(255, 241, 234, 234),
+                          color: const Color.fromARGB(255, 241, 234, 234),
                           borderRadius: BorderRadius.circular(5)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.explore,
                         size: 20,
                         color: Colors.black,
@@ -173,7 +173,7 @@ class YoutubeScreen extends StatelessWidget {
                       //   child: Image.asset("flower/youyube 3.jpg"),
                       // ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
@@ -182,23 +182,23 @@ class YoutubeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.black),
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         "All",
                         style: TextStyle(fontSize: 15, color: Colors.white),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
                       height: 35,
                       width: 75,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 241, 234, 234),
+                        color: const Color.fromARGB(255, 241, 234, 234),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Podcasts",
                           style: TextStyle(
@@ -208,17 +208,17 @@ class YoutubeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
                       height: 35,
                       width: 60,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 241, 234, 234),
+                        color: const Color.fromARGB(255, 241, 234, 234),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Music",
                           style: TextStyle(
@@ -228,17 +228,17 @@ class YoutubeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
                       height: 35,
                       width: 60,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 241, 234, 234),
+                        color: const Color.fromARGB(255, 241, 234, 234),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Mixes",
                           style: TextStyle(
@@ -250,13 +250,13 @@ class YoutubeScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
                   height: 200,
                   width: 4000,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("flower/flutter code.jpg"),
                           fit: BoxFit.fill)),
@@ -264,7 +264,7 @@ class YoutubeScreen extends StatelessWidget {
                 // SizedBox(
                 //   height: 5,
                 // ),
-                ListTile(
+                const ListTile(
                   leading: CircleAvatar(
                     backgroundImage: AssetImage("flower/pro 4.jpg"),
                   ),
@@ -279,11 +279,11 @@ class YoutubeScreen extends StatelessWidget {
                 Container(
                   height: 200,
                   width: 4000,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("flower/quick.jpg"))),
                 ),
-                ListTile(
+                const ListTile(
                   leading: CircleAvatar(
                     backgroundImage: AssetImage("flower/muzamil.jpg"),
                   ),
@@ -295,10 +295,10 @@ class YoutubeScreen extends StatelessWidget {
                       "Muzamil Hassan | TBT  podcast . 25k views .1 day ago"),
                   trailing: Icon(Icons.more_vert),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Column(
+                const Column(
                   children: [
                     Row(
                       children: [

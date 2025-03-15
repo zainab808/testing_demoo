@@ -11,19 +11,19 @@ class HomeScreen extends StatelessWidget {
           onTap: () {
             Navigator.pop(context);
           },
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back_outlined,
             color: Colors.white,
             size: 30,
           ),
         ),
-        title: Center(
+        title: const Center(
             child: Text(
           "Home Page",
           style: TextStyle(color: Colors.white, fontSize: 30),
         )),
-        backgroundColor: Color.fromARGB(255, 235, 39, 104),
-        actions: [
+        backgroundColor: const Color.fromARGB(255, 235, 39, 104),
+        actions: const [
           Icon(
             Icons.search,
             color: Colors.white,
@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           "home page",
           style: TextStyle(fontSize: 50),

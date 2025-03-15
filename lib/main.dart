@@ -10,6 +10,7 @@ import 'package:demoo/view/fork.dart';
 import 'package:demoo/view/green.dart';
 import 'package:demoo/view/home_screen.dart';
 import 'package:demoo/view/hoodie.dart';
+import 'package:demoo/view/hoodie_screen.dart';
 import 'package:demoo/view/insta2_screen.dart';
 import 'package:demoo/view/insta3_screen.dart';
 import 'package:demoo/view/insta_screen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(fontFamily: "Baloo"),
         debugShowCheckedModeBanner: false,
-        home: Todo2Screen());
+        home: Hoodie());
   }
 }
 // jckd j 

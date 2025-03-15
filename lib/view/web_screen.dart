@@ -11,10 +11,10 @@ class WebScreen extends StatelessWidget {
           children: [
             Container(
               width: 5000,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xff3A5664),
               ),
-              child: Column(
+              child: const Column(
                 children: [
                   Row(
                     children: [
@@ -118,7 +118,7 @@ class WebScreen extends StatelessWidget {
                 ],
               ),
             ),
-            ListTile(
+            const ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.white,
                 backgroundImage: AssetImage("flower/new icon.jpg"),
@@ -127,7 +127,7 @@ class WebScreen extends StatelessWidget {
               subtitle: Text("Reacted  to Ok"),
               trailing: Text("Yesterday"),
             ),
-            ListTile(
+            const ListTile(
               leading: CircleAvatar(
                 backgroundImage: AssetImage("flower/pro 1.jpg"),
               ),
@@ -136,22 +136,22 @@ class WebScreen extends StatelessWidget {
               trailing: Text("Yesterday"),
             ),
             ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage("flower/pro 2.jpg"),
               ),
-              title: Text("Shoaib batch 6 Flutter"),
-              subtitle: Text(" Ok"),
+              title: const Text("Shoaib batch 6 Flutter"),
+              subtitle: const Text(" Ok"),
               trailing: Column(
                 children: [
-                  Text("Yesterday"),
-                  Spacer(),
+                  const Text("Yesterday"),
+                  const Spacer(),
                   Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xff26D465)),
-                    child: Center(
+                        color: const Color(0xff26D465)),
+                    child: const Center(
                         child: Text(
                       "1",
                       style: TextStyle(color: Colors.white),
@@ -161,22 +161,22 @@ class WebScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage("flower/pro 3.jpg"),
               ),
-              title: Text("Junaid New Number Best..."),
-              subtitle: Text(" Ok"),
+              title: const Text("Junaid New Number Best..."),
+              subtitle: const Text(" Ok"),
               trailing: Column(
                 children: [
-                  Text("Yesterday"),
-                  Spacer(),
+                  const Text("Yesterday"),
+                  const Spacer(),
                   Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xff26D465)),
-                    child: Center(
+                        color: const Color(0xff26D465)),
+                    child: const Center(
                         child: Text(
                       "1",
                       style: TextStyle(color: Colors.white),
@@ -186,22 +186,22 @@ class WebScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage("flower/pro 4.jpg"),
               ),
-              title: Text("Internal Projects"),
-              subtitle: Text("AbuZar:Yes"),
+              title: const Text("Internal Projects"),
+              subtitle: const Text("AbuZar:Yes"),
               trailing: Column(
                 children: [
-                  Text("Yesterday"),
-                  Spacer(),
+                  const Text("Yesterday"),
+                  const Spacer(),
                   Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xff26D465)),
-                    child: Center(
+                        color: const Color(0xff26D465)),
+                    child: const Center(
                         child: Text(
                       "1",
                       style: TextStyle(color: Colors.white),
@@ -211,22 +211,22 @@ class WebScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage("flower/pro 5.jpg"),
               ),
-              title: Text("+9269436454"),
-              subtitle: Text("https://github.com/dlutton/flutter"),
+              title: const Text("+9269436454"),
+              subtitle: const Text("https://github.com/dlutton/flutter"),
               trailing: Column(
                 children: [
-                  Text("Yesterday"),
-                  Spacer(),
+                  const Text("Yesterday"),
+                  const Spacer(),
                   Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xff26D465)),
-                    child: Center(
+                        color: const Color(0xff26D465)),
+                    child: const Center(
                         child: Text(
                       "1",
                       style: TextStyle(color: Colors.white),
@@ -236,22 +236,22 @@ class WebScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: CircleAvatar(
+              leading: const CircleAvatar(
                 backgroundImage: AssetImage("flower/....png"),
               ),
-              title: Text("Autism Support"),
-              subtitle: Text("Ubaid:Dall E Animal.zip"),
+              title: const Text("Autism Support"),
+              subtitle: const Text("Ubaid:Dall E Animal.zip"),
               trailing: Column(
                 children: [
-                  Text("Yesterday"),
-                  Spacer(),
+                  const Text("Yesterday"),
+                  const Spacer(),
                   Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Color(0xff26D465)),
-                    child: Center(
+                        color: const Color(0xff26D465)),
+                    child: const Center(
                         child: Text(
                       "1",
                       style: TextStyle(color: Colors.white),
@@ -261,22 +261,22 @@ class WebScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-                leading: CircleAvatar(
+                leading: const CircleAvatar(
                   backgroundImage: AssetImage("flower/project.jpg"),
                 ),
-                title: Text("Dev's inn technologies"),
-                subtitle: Text("Agato design work Yes"),
+                title: const Text("Dev's inn technologies"),
+                subtitle: const Text("Agato design work Yes"),
                 trailing: Column(
                   children: [
-                    Text("Yesterday"),
-                    Spacer(),
+                    const Text("Yesterday"),
+                    const Spacer(),
                     Container(
                       height: 20,
                       width: 20,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: Color(0xff26D465)),
-                      child: Center(
+                          color: const Color(0xff26D465)),
+                      child: const Center(
                           child: Text(
                         "1",
                         style: TextStyle(color: Colors.white),
@@ -288,51 +288,51 @@ class WebScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 25,
                     ),
                     Container(
                       height: 30,
                       width: 40,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 231, 229, 229),
+                          color: const Color.fromARGB(255, 231, 229, 229),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Icon(Icons.edit_note_outlined),
+                      child: const Icon(Icons.edit_note_outlined),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       width: 60,
                     ),
                     Container(
                       height: 30,
                       width: 40,
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 231, 229, 229),
+                        color: const Color.fromARGB(255, 231, 229, 229),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Icon(Icons.call),
+                      child: const Icon(Icons.call),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 60,
                     ),
                     Container(
                       height: 30,
                       width: 40,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 231, 229, 229),
+                          color: const Color.fromARGB(255, 231, 229, 229),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Icon(Icons.update_sharp),
+                      child: const Icon(Icons.update_sharp),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 60,
                     ),
                     Container(
                       height: 30,
                       width: 40,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 231, 229, 229),
+                          color: const Color.fromARGB(255, 231, 229, 229),
                           borderRadius: BorderRadius.circular(10)),
-                      child: Icon(Icons.add_to_photos_outlined),
+                      child: const Icon(Icons.add_to_photos_outlined),
                     ),
                     //   Column(
                     //     children: [
@@ -352,7 +352,7 @@ class WebScreen extends StatelessWidget {
                 // SizedBox(
                 //   height: 20,
                 // ),
-                Row(
+                const Row(
                   children: [
                     SizedBox(
                       width: 25,

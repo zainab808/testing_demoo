@@ -10,7 +10,7 @@ class TeddyScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 6,
                 childAspectRatio: 0.6,
                 mainAxisSpacing: 15,
@@ -23,11 +23,11 @@ class TeddyScreen extends StatelessWidget {
                     children: [
                       Image.network(
                           "https://img.drz.lazcdn.com/static/pk/p/de6e167bbd791ed8970d389c0e46a9d6.jpg_200x200q80.jpg_.webp"),
-                      SizedBox(
+                      const SizedBox(
                         height: 15,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
+                      const Padding(
+                        padding: EdgeInsets.all(5.0),
                         child: Column(
                           children: [
                             Text(

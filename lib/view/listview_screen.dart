@@ -18,13 +18,13 @@ class ListviewScreen extends StatelessWidget {
                     border: Border.all(
                         color: index % 2 == 0 ? Colors.cyan : Colors.orange,
                         width: 7),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                         image: NetworkImage(
                             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHxgglc6lQ7vXyAy01OHKrhkA5aV6flaRt1g&s"),
                         fit: BoxFit.fill),
                     color: index % 2 == 0
-                        ? Color.fromARGB(255, 56, 190, 117)
-                        : Color.fromARGB(255, 243, 31, 16)),
+                        ? const Color.fromARGB(255, 56, 190, 117)
+                        : const Color.fromARGB(255, 243, 31, 16)),
                 child: Center(
                   child: Row(
                     children: [
@@ -41,7 +41,7 @@ class ListviewScreen extends StatelessWidget {
                             fontSize: 50,
                             fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 500,
                       ),
                       Text(

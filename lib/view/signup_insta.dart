@@ -11,7 +11,7 @@ class SignupInsta extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             // if(s.width>360)
@@ -23,23 +23,23 @@ class SignupInsta extends StatelessWidget {
                     color: s.width < 362
                         ? Colors.white
                         : const Color.fromARGB(255, 194, 193, 193)),
-                color: Color(0xffFFFFFF),
+                color: const Color(0xffFFFFFF),
               ),
               child: Padding(
                 padding: s.width < 362
-                    ? EdgeInsets.only(left: 10, top: 40)
+                    ? const EdgeInsets.only(left: 10, top: 40)
                     : const EdgeInsets.only(
                         left: 40, right: 40, top: 40, bottom: 20),
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       "Instagram",
                       style: TextStyle(
                           fontSize: 35,
                           fontWeight: FontWeight.bold,
                           fontFamily: "Static"),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Text(
@@ -56,10 +56,10 @@ class SignupInsta extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontSize: 17),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
@@ -82,7 +82,7 @@ class SignupInsta extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(3)),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "f",
                                 style: TextStyle(
@@ -93,7 +93,7 @@ class SignupInsta extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                           Text(
@@ -106,7 +106,7 @@ class SignupInsta extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -117,17 +117,17 @@ class SignupInsta extends StatelessWidget {
                           width: s.width < 362 ? 80 : 110,
                           color: Colors.grey[400],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
-                        Center(
+                        const Center(
                             child: Text(
                           "OR",
                           style: TextStyle(
-                              color: const Color.fromARGB(255, 117, 117, 117),
+                              color: Color.fromARGB(255, 117, 117, 117),
                               fontWeight: FontWeight.w300),
                         )),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Container(
@@ -137,104 +137,104 @@ class SignupInsta extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Container(
+                    SizedBox(
                         height: 35,
                         width: s.width < 362 ? 300 : 360,
                         child: TextField(
                           decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
+                              focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.grey)),
                               focusColor: Colors.grey,
                               hoverColor: Colors.grey,
-                              fillColor: Color(0xffFAFAFA),
-                              border: OutlineInputBorder(
+                              fillColor: const Color(0xffFAFAFA),
+                              border: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                       style: BorderStyle.solid,
-                                      color: const Color.fromARGB(
-                                          255, 212, 209, 209))),
+                                      color:
+                                          Color.fromARGB(255, 212, 209, 209))),
                               // hoverColor: Colors.grey,
                               hintText: "Mobile Number or Email",
                               hintStyle: TextStyle(
                                   fontSize: s.width < 362 ? 10 : 12,
                                   color: Colors.grey)),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Container(
+                    SizedBox(
                         height: 35,
                         width: s.width < 362 ? 300 : 360,
                         child: TextField(
                           decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
+                              focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.grey)),
                               focusColor:
                                   const Color.fromARGB(255, 184, 183, 183),
                               hoverColor:
                                   const Color.fromARGB(255, 196, 193, 193),
-                              fillColor: Color(0xffFAFAFA),
-                              border: OutlineInputBorder(
+                              fillColor: const Color(0xffFAFAFA),
+                              border: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                       style: BorderStyle.solid,
-                                      color: const Color.fromARGB(
-                                          255, 212, 209, 209))),
+                                      color:
+                                          Color.fromARGB(255, 212, 209, 209))),
                               hintText: "Password",
                               hintStyle: TextStyle(
                                   fontSize: s.width < 362 ? 10 : 12,
                                   color: Colors.grey)),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Container(
+                    SizedBox(
                         height: 35,
                         width: s.width < 362 ? 300 : 360,
                         child: TextField(
                           decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
+                              focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.grey)),
                               focusColor: Colors.grey,
                               hoverColor: Colors.grey,
-                              fillColor: Color(0xffFAFAFA),
-                              border: OutlineInputBorder(
+                              fillColor: const Color(0xffFAFAFA),
+                              border: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                       style: BorderStyle.solid,
-                                      color: const Color.fromARGB(
-                                          255, 212, 209, 209))),
+                                      color:
+                                          Color.fromARGB(255, 212, 209, 209))),
                               // hoverColor: Colors.grey,
                               hintText: "Full Name",
                               hintStyle: TextStyle(
                                   fontSize: s.width < 362 ? 10 : 12,
                                   color: Colors.grey)),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
-                    Container(
+                    SizedBox(
                         height: 35,
                         width: s.width < 362 ? 300 : 360,
                         child: TextField(
                           decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
+                              focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.grey)),
                               focusColor: Colors.grey,
                               hoverColor: Colors.grey,
                               fillColor: Colors.grey[400],
-                              border: OutlineInputBorder(
+                              border: const OutlineInputBorder(
                                   borderSide: BorderSide(
                                       style: BorderStyle.solid,
-                                      color: const Color.fromARGB(
-                                          255, 212, 209, 209))),
+                                      color:
+                                          Color.fromARGB(255, 212, 209, 209))),
                               // hoverColor: Colors.grey,
                               hintText: "Username",
                               hintStyle: TextStyle(
                                   fontSize: s.width < 362 ? 10 : 12,
                                   color: Colors.grey)),
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
 
@@ -242,12 +242,12 @@ class SignupInsta extends StatelessWidget {
                       "People who use our service may have uploaded your contact information to Instagram.",
                       style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                     ),
-                    Text(
+                    const Text(
                       "Learn More",
                       style: TextStyle(color: Color.fromARGB(255, 1, 15, 145)),
                     ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -256,7 +256,7 @@ class SignupInsta extends StatelessWidget {
                           "By signing up, you agree to our ",
                           style: TextStyle(color: Colors.grey[600]),
                         ),
-                        Text(
+                        const Text(
                           "Terms,",
                           style:
                               TextStyle(color: Color.fromARGB(255, 1, 15, 145)),
@@ -265,7 +265,7 @@ class SignupInsta extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Privacy Policy ,",
                           style:
                               TextStyle(color: Color.fromARGB(255, 1, 15, 145)),
@@ -274,14 +274,14 @@ class SignupInsta extends StatelessWidget {
                           "and ,",
                           style: TextStyle(color: Colors.grey[600]),
                         ),
-                        Text(
+                        const Text(
                           "Cooking  Policy ,",
                           style:
                               TextStyle(color: Color.fromARGB(255, 1, 15, 145)),
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Container(
@@ -305,7 +305,7 @@ class SignupInsta extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
             Container(
@@ -316,13 +316,13 @@ class SignupInsta extends StatelessWidget {
                       color: s.width < 362
                           ? Colors.white
                           : const Color.fromARGB(255, 201, 198, 198))),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Don't have an account?",
                     style: TextStyle(
-                      color: const Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                   SizedBox(
@@ -336,15 +336,15 @@ class SignupInsta extends StatelessWidget {
               ),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Text(
+            const Text(
               "Get the app.",
               style: TextStyle(color: Colors.black),
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
 
@@ -364,7 +364,7 @@ class SignupInsta extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
                           Text(
@@ -386,7 +386,7 @@ class SignupInsta extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Container(
@@ -402,7 +402,7 @@ class SignupInsta extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 3,
                           ),
                           Text(
@@ -426,7 +426,7 @@ class SignupInsta extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             Column(
@@ -435,7 +435,7 @@ class SignupInsta extends StatelessWidget {
                   height: 50,
                   width: 920,
                   color: Colors.white,
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // SizedBox(
@@ -596,25 +596,25 @@ class SignupInsta extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "English",
                       style: TextStyle(color: Colors.grey, fontSize: 14),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.arrow_drop_up_rounded,
                       size: 25,
                       color: Colors.grey,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -624,22 +624,22 @@ class SignupInsta extends StatelessWidget {
                           borderRadius: BorderRadius.circular(7.5),
                           color: Colors.white,
                           border: Border.all(color: Colors.grey)),
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         "C",
                         style: TextStyle(fontSize: 10, color: Colors.grey),
                       )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
-                    Text(
+                    const Text(
                       "2025 Instagram from Meta ",
                       style: TextStyle(color: Colors.grey, fontSize: 14),
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 )
               ],

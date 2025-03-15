@@ -1,10 +1,13 @@
 import 'dart:convert';
 
+import 'package:demoo/components/custom_size.dart';
 import 'package:demoo/utiles/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Todo2Screen extends StatefulWidget {
+  const Todo2Screen({super.key});
+
   @override
   State<Todo2Screen> createState() => _Todo2ScreenState();
 }
@@ -39,14 +42,14 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                 Navigator.pop(context);
               },
               color: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               child: Text(
                 "Cancel",
                 style: TextStyle(
                   color: Color(0xff1E1330),
                 ),
               ),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
             ),
             MaterialButton(
               onPressed: () {
@@ -56,13 +59,13 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                 // todolist.clear();
                 // setState(() {});
               },
-              color: Color(0xff1E1330),
+              color: const Color(0xff1E1330),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
               child: Text(
                 "Delete",
                 style: TextStyle(color: Colors.white),
               ),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20)),
             ),
           ],
         );
@@ -123,11 +126,11 @@ class _Todo2ScreenState extends State<Todo2Screen> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           height: 60,
           decoration: BoxDecoration(
               border: Border.all(color: Colors.white),
-              color: Color(0xff2C2242),
+              color: const Color(0xff2C2242),
               //  Colors.grey.withOpacity(0.3),
               borderRadius: BorderRadius.circular(8)),
           child: Row(
@@ -143,11 +146,11 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                   });
                 },
                 controller: controller,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Write a task",
-                  hintStyle: TextStyle(color: Colors.white),
+                  hintStyle: const TextStyle(color: Colors.white),
                   suffixIcon: InkWell(
                     onTap: () {
                       setState(() {
@@ -164,7 +167,7 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(5)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.add,
                         size: 25,
                         color: Color.fromARGB(255, 39, 3, 51),
@@ -177,12 +180,12 @@ class _Todo2ScreenState extends State<Todo2Screen> {
           ),
         ),
       ),
-      backgroundColor: Color(0xff1E1330),
+      backgroundColor: const Color(0xff1E1330),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
                 Text(
                   "TODO LIST",
@@ -199,11 +202,14 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                 )
               ],
             ),
-            SizedBox(
-              height: 20,
+            hsize(
+              height: 30,
             ),
+            // const SizedBox(
+            //   height: 20,
+            // ),
             todolist.isEmpty
-                ? Text("No Todo List Yet!",
+                ? const Text("No Todo List Yet!",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -217,24 +223,24 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                           Row(
                             children: [
                               Container(
-                                  padding: EdgeInsets.symmetric(
+                                  padding: const EdgeInsets.symmetric(
                                       horizontal: 10, vertical: 5),
-                                  margin: EdgeInsets.symmetric(
+                                  margin: const EdgeInsets.symmetric(
                                       horizontal: 5, vertical: 7),
                                   height: 50,
                                   width: 50,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
-                                    color: Color(0xff2C2242),
+                                    color: const Color(0xff2C2242),
                                     // color: Colors.grey.withOpacity(0.3),
                                   ),
                                   child: Center(
                                       child: Text(
                                     "${index + 1}",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         color: Colors.white, fontSize: 15),
                                   ))),
-                              SizedBox(
+                              const SizedBox(
                                 width: 5,
                               ),
                               Expanded(
@@ -242,19 +248,20 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                                   height: 50,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
-                                    color: Color(0xff2C2242),
+                                    color: const Color(0xff2C2242),
                                     // color: Colors.grey.withOpacity(0.3),
                                   ),
                                   child: Row(
                                     children: [
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Text(
                                         todolist[index],
-                                        style: TextStyle(color: Colors.white),
+                                        style: const TextStyle(
+                                            color: Colors.white),
                                       ),
-                                      Spacer(),
+                                      const Spacer(),
                                       MaterialButton(
                                         onPressed: () {
                                           todolist.removeAt(index);
@@ -267,7 +274,7 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                                           color: AppColors.white,
                                         ),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 5,
                                       )
                                     ],
@@ -279,7 +286,7 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                         ],
                       );
                     }),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -299,7 +306,7 @@ class _Todo2ScreenState extends State<Todo2Screen> {
                       style: TextStyle(color: AppColors.red, fontSize: 15),
                     ),
                   ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 )
               ],

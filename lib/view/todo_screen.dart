@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TodoScreen extends StatefulWidget {
+  const TodoScreen({super.key});
+
   @override
   State<TodoScreen> createState() => _TodoScreenState();
 }
@@ -39,12 +41,12 @@ class _TodoScreenState extends State<TodoScreen> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
                 child: Text(
                   "Cancel",
                   style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20))),
+                )),
             MaterialButton(
                 color: Colors.red,
                 onPressed: () {
@@ -53,12 +55,12 @@ class _TodoScreenState extends State<TodoScreen> {
                     () {},
                   );
                 },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
                 child: Text(
                   "Delete",
                   style: TextStyle(color: Colors.white),
-                ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20))),
+                )),
           ],
         );
       },
@@ -68,7 +70,7 @@ class _TodoScreenState extends State<TodoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffDDF7D9),
+      backgroundColor: const Color(0xffDDF7D9),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -91,12 +93,12 @@ class _TodoScreenState extends State<TodoScreen> {
               child: Container(
                 height: 50,
                 width: 1350,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xff152B16),
                 ),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -105,15 +107,15 @@ class _TodoScreenState extends State<TodoScreen> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(3)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.check,
                         color: Color(0xff152B16),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
-                    Text("TODO",
+                    const Text("TODO",
                         style: TextStyle(
                           fontSize: 35,
                           fontWeight: FontWeight.bold,
@@ -128,10 +130,10 @@ class _TodoScreenState extends State<TodoScreen> {
               child: Container(
                 height: 70,
                 width: 1350,
-                color: Color(0xff7BA700),
+                color: const Color(0xff7BA700),
                 child: Row(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 75,
                     ),
                     //   Container(
@@ -147,7 +149,7 @@ class _TodoScreenState extends State<TodoScreen> {
                     Container(
                       height: 50,
                       width: 1100,
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: TextField(
                         onSubmitted: (c) {
                           todolist.add(controller.text);
@@ -156,13 +158,13 @@ class _TodoScreenState extends State<TodoScreen> {
                           setState(() {});
                         },
                         controller: controller,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             border: InputBorder.none,
                             filled: true,
                             fillColor: Colors.white),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     MaterialButton(
@@ -172,6 +174,9 @@ class _TodoScreenState extends State<TodoScreen> {
                         controller.clear();
                         setState(() {});
                       },
+                      height: 55,
+                      minWidth: 55,
+                      color: const Color(0xffC9F744),
                       child: Icon(
                         Icons.add,
                         size: 40,
@@ -179,15 +184,12 @@ class _TodoScreenState extends State<TodoScreen> {
                           0xff152B16,
                         ),
                       ),
-                      height: 55,
-                      minWidth: 55,
-                      color: Color(0xffC9F744),
                     )
                   ],
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -206,22 +208,22 @@ class _TodoScreenState extends State<TodoScreen> {
                         height: 30,
                         minWidth: 70,
                         color: Colors.white,
-                        child: Text(
+                        child: const Text(
                           "Clear All",
                           style: TextStyle(
                               color: Colors.red, fontWeight: FontWeight.bold),
                         ),
                       ),
-                SizedBox(
+                const SizedBox(
                   width: 60,
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             todolist.isEmpty
-                ? Text("No Todo List Yet!",
+                ? const Text("No Todo List Yet!",
                     style: TextStyle(
                         color: Color(0xff152B16),
                         fontSize: 20,
@@ -232,11 +234,11 @@ class _TodoScreenState extends State<TodoScreen> {
                     itemBuilder: (context, index) {
                       return Container(
                         height: 50,
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 72, vertical: 7),
-                        decoration: BoxDecoration(color: Colors.white),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 5),
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 72, vertical: 7),
+                        decoration: const BoxDecoration(color: Colors.white),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -244,19 +246,19 @@ class _TodoScreenState extends State<TodoScreen> {
                             Row(
                               children: [
                                 Text(todolist[index]),
-                                Spacer(),
+                                const Spacer(),
                                 MaterialButton(
                                   onPressed: () {
                                     todolist.removeAt(index);
                                     setState(() {});
                                   },
+                                  height: 40,
+                                  minWidth: 40,
+                                  color: const Color(0xffC9F744),
                                   child: Icon(
                                     Icons.delete,
                                     color: Color(0xff152B16),
                                   ),
-                                  height: 40,
-                                  minWidth: 40,
-                                  color: Color(0xffC9F744),
                                 )
                               ],
                             ),

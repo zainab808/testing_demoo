@@ -1,3 +1,5 @@
+import 'package:demoo/view/mobile_screen.dart';
+
 import 'package:flutter/material.dart';
 
 class Mobile extends StatelessWidget {
@@ -6,10 +8,10 @@ class Mobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff050B20),
+      backgroundColor: const Color(0xff050B20),
       body: Column(
         children: [
-          Row(
+          const Row(
             children: [
               SizedBox(
                 width: 5,
@@ -56,10 +58,10 @@ class Mobile extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
@@ -71,30 +73,30 @@ class Mobile extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Container(
                 height: 150,
                 width: 150,
                 decoration: BoxDecoration(
-                    color: Color(0xff1E1F32),
+                    color: const Color(0xff1E1F32),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.male,
                       size: 60,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 90,
                     ),
                     Text(
@@ -110,25 +112,25 @@ class Mobile extends StatelessWidget {
                 //   color: Colors.white,
                 // ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 30,
               ),
               Container(
                 height: 150,
                 width: 150,
                 decoration: BoxDecoration(
-                    color: Color(0xff1E1F32),
+                    color: const Color(0xff1E1F32),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.female,
                       size: 60,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 90,
                     ),
                     Text(
@@ -146,15 +148,15 @@ class Mobile extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.all(18),
+            padding: const EdgeInsets.all(18),
             height: 150,
             width: 350,
             decoration: BoxDecoration(
-                color: Color(0xff1E1F32),
+                color: const Color(0xff1E1F32),
                 borderRadius: BorderRadius.circular(10)),
             child: Column(
               children: [
@@ -176,7 +178,7 @@ class Mobile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("177",
+                    const Text("177",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 45,
@@ -188,7 +190,7 @@ class Mobile extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
 
@@ -201,19 +203,19 @@ class Mobile extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Container(
                 height: 150,
                 width: 150,
                 decoration: BoxDecoration(
-                    color: Color(0xff1E1F32),
+                    color: const Color(0xff1E1F32),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Column(
@@ -230,7 +232,7 @@ class Mobile extends StatelessWidget {
                     // SizedBox(
                     //   height: 5,
                     // ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("70",
@@ -245,36 +247,36 @@ class Mobile extends StatelessWidget {
                     // ),
                     Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Container(
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
-                            color: Color(0xff4F4559),
+                            color: const Color(0xff4F4559),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Icons.add,
                             size: 30,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Container(
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
-                              color: Color(0xff4F4559),
+                              color: const Color(0xff4F4559),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "-",
                                 style: TextStyle(
@@ -291,14 +293,14 @@ class Mobile extends StatelessWidget {
                 //   color: Colors.white,
                 // ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 30,
               ),
               Container(
                 height: 150,
                 width: 150,
                 decoration: BoxDecoration(
-                    color: Color(0xff1E1F32),
+                    color: const Color(0xff1E1F32),
                     borderRadius: BorderRadius.circular(10)),
 
                 child: Column(
@@ -315,7 +317,7 @@ class Mobile extends StatelessWidget {
                     // SizedBox(
                     //   height: 5,
                     // ),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("20",
@@ -330,36 +332,36 @@ class Mobile extends StatelessWidget {
                     // ),
                     Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         Container(
                           height: 40,
                           width: 40,
                           decoration: BoxDecoration(
-                            color: Color(0xff4F4559),
+                            color: const Color(0xff4F4559),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Icons.add,
                             size: 30,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         Container(
                             height: 40,
                             width: 40,
                             decoration: BoxDecoration(
-                              color: Color(0xff4F4559),
+                              color: const Color(0xff4F4559),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "-",
                                 style: TextStyle(
@@ -378,14 +380,14 @@ class Mobile extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
             height: 40,
             width: 600,
-            decoration: BoxDecoration(color: Colors.pink),
-            child: Center(
+            decoration: const BoxDecoration(color: Colors.pink),
+            child: const Center(
               child: Text(
                 "Calculate",
                 style: TextStyle(

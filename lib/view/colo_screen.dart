@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ColoScreen extends StatefulWidget {
+  const ColoScreen({super.key});
+
   @override
   State<ColoScreen> createState() => _ColoScreenState();
 }
@@ -11,9 +13,9 @@ class _ColoScreenState extends State<ColoScreen> {
   var list = [
     Colors.pink,
     Colors.amber,
-    Color.fromARGB(255, 29, 185, 34),
-    Color.fromARGB(255, 95, 89, 89),
-    Color.fromARGB(255, 6, 230, 133),
+    const Color.fromARGB(255, 29, 185, 34),
+    const Color.fromARGB(255, 95, 89, 89),
+    const Color.fromARGB(255, 6, 230, 133),
     Colors.purple,
     Colors.orange,
     Colors.red,
@@ -39,11 +41,11 @@ class _ColoScreenState extends State<ColoScreen> {
                 decoration: BoxDecoration(
                     boxShadow: [
                       selectedcolor == i
-                          ? BoxShadow(
+                          ? const BoxShadow(
                               blurRadius: 5,
                               spreadRadius: 5,
-                              color: const Color.fromARGB(255, 40, 30, 30))
-                          : BoxShadow()
+                              color: Color.fromARGB(255, 40, 30, 30))
+                          : const BoxShadow()
                     ],
                     borderRadius: selectedcolor == i
                         ? BorderRadius.circular(150)
@@ -51,10 +53,10 @@ class _ColoScreenState extends State<ColoScreen> {
                     color: list[i],
                     border: selectedcolor == i
                         ? Border.all(color: Colors.black, width: 5)
-                        : Border()),
+                        : const Border()),
                 child: Center(
                   child: selectedcolor == i
-                      ? Text(
+                      ? const Text(
                           "Circle",
                           style: TextStyle(
                               color: Colors.white,

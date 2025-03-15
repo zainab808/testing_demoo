@@ -4,6 +4,8 @@ class LoginScreen extends StatelessWidget {
   // const LoginScreen({super.key});
   final _formKey = GlobalKey<FormState>();
 
+  LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,11 +15,11 @@ class LoginScreen extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
-              Text(
+              const Text(
                 "LOGIN",
                 style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     "Username",
@@ -32,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                   }
                   return null;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     hintText: "type your username",
                     prefixIcon: Icon(
                       Icons.person,
@@ -40,10 +42,10 @@ class LoginScreen extends StatelessWidget {
                     ),
                     hintStyle: TextStyle(color: Colors.grey)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     "password",
@@ -58,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                   }
                   return null;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     hintText: "type your password",
                     prefixIcon: Icon(
                       Icons.lock,
@@ -66,70 +68,71 @@ class LoginScreen extends StatelessWidget {
                     ),
                     hintStyle: TextStyle(color: Colors.grey)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text("forget password"),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 height: 50,
                 width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    gradient: const LinearGradient(
+                        colors: [Colors.cyan, Colors.purple])),
                 child: Center(
                   child: Text(
                     "LOGIN",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    gradient:
-                        LinearGradient(colors: [Colors.cyan, Colors.purple])),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text("Or Sign Up Using"),
-              SizedBox(
+              const Text("Or Sign Up Using"),
+              const SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
+                    backgroundColor: const Color(0xff345A99),
                     child: Image.asset("flower/th.jpg"),
-                    backgroundColor: Color(0xff345A99),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   CircleAvatar(
+                    backgroundColor: const Color(0xff1CA1F1),
                     child: Image.asset("flower/t1.jpg"),
-                    backgroundColor: Color(0xff1CA1F1),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   CircleAvatar(
+                    backgroundColor: const Color(0xffF23A38),
                     child: Image.asset("flower/g1.png"),
-                    backgroundColor: Color(0xffF23A38),
                   )
                 ],
               ),
-              Spacer(),
-              Text("Have not yet account"),
+              const Spacer(),
+              const Text("Have not yet account"),
               InkWell(
                   onTap: () {
-                    if (_formKey.currentState!.validate())
+                    if (_formKey.currentState!.validate()) {
                       Navigator.pop(context);
+                    }
                   },
-                  child: Text("SIGN UP",
+                  child: const Text("SIGN UP",
                       style: TextStyle(fontWeight: FontWeight.bold))),
             ],
           ),

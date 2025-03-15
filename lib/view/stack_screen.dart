@@ -8,10 +8,10 @@ class StackScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          padding: EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10),
           height: 700,
           width: 1350,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.black,
               image: DecorationImage(
                   image: NetworkImage(
@@ -19,7 +19,7 @@ class StackScreen extends StatelessWidget {
                   fit: BoxFit.fill)),
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 height: 600,
                 width: 400,
                 child: Stack(
@@ -29,7 +29,7 @@ class StackScreen extends StatelessWidget {
                       child: Container(
                         height: 390,
                         width: 400,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20),
@@ -42,7 +42,7 @@ class StackScreen extends StatelessWidget {
                     Container(
                       height: 250,
                       width: 400,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: NetworkImage(
                                   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQv_T8KwuTHRPqpPGGQ2RFWsWMgXnk66RPVav4fmqPjVBpOMC16"),
@@ -53,7 +53,7 @@ class StackScreen extends StatelessWidget {
                               bottomRight: Radius.circular(15),
                               bottomLeft: Radius.circular(15))),
                     ),
-                    Positioned(
+                    const Positioned(
                       top: 140,
                       right: 110,
                       child: CircleAvatar(
@@ -64,7 +64,7 @@ class StackScreen extends StatelessWidget {
                         backgroundColor: Colors.white,
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       bottom: 210,
                       right: 210,
                       child: Text("User",
@@ -73,7 +73,7 @@ class StackScreen extends StatelessWidget {
                               fontSize: 40,
                               fontWeight: FontWeight.bold)),
                     ),
-                    Positioned(
+                    const Positioned(
                       bottom: 212,
                       right: 119,
                       child: Text(
@@ -92,7 +92,7 @@ class StackScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Login",
                             style: TextStyle(
@@ -111,7 +111,7 @@ class StackScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(20)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Register",
                             style: TextStyle(
@@ -121,7 +121,7 @@ class StackScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       bottom: 60,
                       right: 148,
                       child: Text(
@@ -132,7 +132,7 @@ class StackScreen extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       bottom: 35,
                       right: 165,
                       child: Text(
@@ -143,7 +143,7 @@ class StackScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       bottom: 0,
                       right: 135,
                       child: Text(

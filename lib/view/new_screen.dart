@@ -6,14 +6,14 @@ class NewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffE6E8E8),
+      backgroundColor: const Color(0xffE6E8E8),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
+          const Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: EdgeInsets.only(left: 10),
                 child: Row(
                   children: [
                     Text(
@@ -44,7 +44,7 @@ class NewScreen extends StatelessWidget {
                         height: 100,
                         width: 100,
                         decoration: BoxDecoration(
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   color: Color.fromARGB(255, 175, 169, 169),
                                   spreadRadius: 3,
@@ -60,16 +60,16 @@ class NewScreen extends StatelessWidget {
                         ))),
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     "Apple",
                     style: TextStyle(fontWeight: FontWeight.w600),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
 
@@ -80,15 +80,15 @@ class NewScreen extends StatelessWidget {
                     height: 100,
                     width: 100,
                     decoration: BoxDecoration(
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               color: Color.fromARGB(255, 175, 169, 169),
                               spreadRadius: 3,
                               blurRadius: 10)
                         ],
-                        color: Color(0xff3B97EF),
+                        color: const Color(0xff3B97EF),
                         borderRadius: BorderRadius.circular(15)),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "B",
                         style: TextStyle(
@@ -98,13 +98,14 @@ class NewScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text("Bing", style: TextStyle(fontWeight: FontWeight.w600))
+                  const Text("Bing",
+                      style: TextStyle(fontWeight: FontWeight.w600))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               //google
@@ -114,7 +115,7 @@ class NewScreen extends StatelessWidget {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                                 color: Color.fromARGB(255, 175, 169, 169),
                                 spreadRadius: 3,
@@ -128,13 +129,14 @@ class NewScreen extends StatelessWidget {
                         height: 70,
                         width: 70,
                       ))),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text("Google", style: TextStyle(fontWeight: FontWeight.w600))
+                  const Text("Google",
+                      style: TextStyle(fontWeight: FontWeight.w600))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               //yahoo
@@ -144,13 +146,13 @@ class NewScreen extends StatelessWidget {
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                                 color: Color.fromARGB(255, 175, 169, 169),
                                 spreadRadius: 3,
                                 blurRadius: 10)
                           ],
-                          color: Color(0xff4D00A7),
+                          color: const Color(0xff4D00A7),
                           borderRadius: BorderRadius.circular(15)),
                       child: Center(
                           child: Image.asset(
@@ -159,10 +161,11 @@ class NewScreen extends StatelessWidget {
                         height: 90,
                         width: 90,
                       ))),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text("Yahoo", style: TextStyle(fontWeight: FontWeight.w600))
+                  const Text("Yahoo",
+                      style: TextStyle(fontWeight: FontWeight.w600))
                 ],
               ),
             ],

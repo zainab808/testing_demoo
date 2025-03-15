@@ -64,6 +64,8 @@ class Insta2Screen extends StatelessWidget {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOYf_84WMvHNTf_5GFQpNSGDlTrkfTNVdVnw&s"
     },
   ];
+
+  Insta2Screen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +79,7 @@ class Insta2Screen extends StatelessWidget {
                     color: const Color.fromARGB(255, 224, 222, 222))),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 Image.network(
@@ -85,93 +87,93 @@ class Insta2Screen extends StatelessWidget {
                   fit: BoxFit.contain,
                   height: 50,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                Icon(
+                const Icon(
                   Icons.home,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Icon(
+                const Icon(
                   Icons.search,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Icon(
+                const Icon(
                   Icons.explore,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Icon(
+                const Icon(
                   Icons.ondemand_video_outlined,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Icon(
+                const Icon(
                   Icons.maps_ugc_rounded,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Icon(
+                const Icon(
                   Icons.favorite_border,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
-                Icon(
+                const Icon(
                   Icons.add_box_outlined,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 21,
                 ),
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 15,
                   backgroundImage: AssetImage("image/g.jpg"),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Icon(
+                const Icon(
                   Icons.menu,
                   color: Colors.black,
                   size: 30,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
               ],
             ),
           ),
-          Spacer(),
-          Container(
+          const Spacer(),
+          SizedBox(
             width: 500,
             //  color: Colors.amber,
             // MediaQuery.of(context).size.height,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 50),
+                const Padding(
+                  padding: EdgeInsets.only(left: 20, top: 50),
                   child: Text(
                     "Suggester",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
@@ -187,7 +189,7 @@ class Insta2Screen extends StatelessWidget {
                             children: [
                               Text(
                                 list[index]["sabname"].toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.w100),
                               ),
                               Text(list[index]["follow"].toString()),
@@ -195,7 +197,7 @@ class Insta2Screen extends StatelessWidget {
                           ),
                           title: Text(
                             list[index]["name"].toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),
                           ),
                           leading: CircleAvatar(
@@ -211,7 +213,7 @@ class Insta2Screen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "Follow",
                                 style: TextStyle(
                                     color: Colors.white,
@@ -224,7 +226,7 @@ class Insta2Screen extends StatelessWidget {
               ],
             ),
           ),
-          Spacer()
+          const Spacer()
         ],
       ),
     );

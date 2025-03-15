@@ -1,9 +1,13 @@
+import 'package:demoo/view/practice_screen.dart';
+
 import 'package:demoo/view/landing_screen.dart';
 import 'package:flutter/material.dart';
 
 class Practice extends StatelessWidget {
   // const Practice({super.key});
   final _formKey = GlobalKey<FormState>();
+
+  Practice({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +19,7 @@ class Practice extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -27,10 +31,10 @@ class Practice extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     "Pasword",
@@ -45,7 +49,7 @@ class Practice extends StatelessWidget {
                   }
                   return null;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     hintText: "Please Enter Password",
                     prefixIcon: Icon(
                       Icons.search,
@@ -53,10 +57,10 @@ class Practice extends StatelessWidget {
                       size: 20,
                     )),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     "Username",
@@ -71,7 +75,7 @@ class Practice extends StatelessWidget {
                   }
                   return null;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Please Enter Username",
                   prefixIcon: Icon(
                     Icons.search,
@@ -81,10 +85,10 @@ class Practice extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     "Confirm Password",
@@ -99,7 +103,7 @@ class Practice extends StatelessWidget {
                   }
                   return null;
                 },
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: "Please Enter Confirm Password",
                   prefixIcon: Icon(
                     Icons.search,
@@ -108,7 +112,7 @@ class Practice extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
@@ -123,16 +127,19 @@ class Practice extends StatelessWidget {
 
               InkWell(
                 onTap: () {
-                  if (_formKey.currentState!.validate())
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => LandingScreen()));
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const LandingScreen()));
+                  }
                 },
                 child: Container(
                   height: 50,
                   width: 700,
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           spreadRadius: 5,
                           blurRadius: 10,
@@ -143,25 +150,25 @@ class Practice extends StatelessWidget {
                       color: Colors.white),
                   child: Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.search,
                         color: Colors.grey,
                         size: 20,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text("Search or type URL"),
-                      Spacer(),
+                      const Text("Search or type URL"),
+                      const Spacer(),
                       Image.network(
                         "data:image/png;base64,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",
                         height: 15,
                         width: 15,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Image.network(
@@ -169,22 +176,22 @@ class Practice extends StatelessWidget {
                         height: 30,
                         width: 30,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.search,
                         size: 20,
                         color: Colors.blue,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                     ],
                   ),
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                     prefixIcon: Icon(
                       Icons.search,
