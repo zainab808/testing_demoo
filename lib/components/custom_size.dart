@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class hsize extends StatelessWidget {
+class HSize extends StatelessWidget {
   var height;
-  hsize({this.height});
+  HSize({this.height});
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -11,10 +11,10 @@ class hsize extends StatelessWidget {
   }
 }
 
-class wsize extends StatelessWidget {
-  // const wsize({super.key});
+class WSize extends StatelessWidget {
+  // const WSize({super.key});
   var width;
-  wsize({this.width});
+  WSize({this.width});
 
   @override
   Widget build(BuildContext context) {

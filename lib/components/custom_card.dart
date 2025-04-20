@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key});
+  var image, height, width;
+  CustomCard({this.image, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-      width: 700,
+      height: height,
+      width: width,
       decoration: BoxDecoration(
           image: DecorationImage(
               image: NetworkImage(

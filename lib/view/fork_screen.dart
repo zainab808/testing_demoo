@@ -1,4 +1,4 @@
-import 'package:demoo/view/fork.dart';
+import 'package:demoo/components/custom_size.dart';
 
 import 'package:demoo/components/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +18,14 @@ class Fork extends StatelessWidget {
                 image: NetworkImage(
                     "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSeRq1tafo7WQubd8sau59eRRz0oWj2H_2FzOM93q7_jmrN7Xse"),
                 fit: BoxFit.cover)),
-        child: const Column(
+        child: Column(
           children: [
-            SizedBox(
+            HSize(
               height: 50,
             ),
+            // SizedBox(
+            //   height: 50,
+            // ),
 
             Icon(
               Icons.lock,
@@ -32,13 +35,20 @@ class Fork extends StatelessWidget {
             // SizedBox(
             //   height: 5,
             // ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "2:18",
-                  style: TextStyle(color: Colors.white, fontSize: 70),
+                CustomText(
+                  text: "2:18",
+                  color: Colors.white,
+                  fontsize: 70,
                 )
+
+                // Text(
+                //   "2:18",
+                //   style: TextStyle(color: Colors.white, fontSize: 70),
+                // )
               ],
             ),
             Row(

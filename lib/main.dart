@@ -1,3 +1,4 @@
+import 'package:demoo/controller/provider/counter_provider.dart';
 import 'package:demoo/view/Todo2_screen.dart';
 import 'package:demoo/view/colo_screen.dart';
 import 'package:demoo/view/count_screen.dart';
@@ -5,8 +6,8 @@ import 'package:demoo/view/counter.dart';
 
 import 'package:demoo/view/daraz.dart';
 import 'package:demoo/view/design.dart';
+import 'package:demoo/view/design_screen.dart';
 import 'package:demoo/view/first_screen.dart';
-import 'package:demoo/view/fork.dart';
 import 'package:demoo/view/green.dart';
 import 'package:demoo/view/home_screen.dart';
 import 'package:demoo/view/hoodie.dart';
@@ -17,9 +18,11 @@ import 'package:demoo/view/insta_screen.dart';
 import 'package:demoo/view/landing_screen.dart';
 import 'package:demoo/view/listview_screen.dart';
 import 'package:demoo/view/login_screen.dart';
+import 'package:demoo/view/new_counter_screen.dart';
 import 'package:demoo/view/todo_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,10 +34,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(fontFamily: "Baloo"),
-        debugShowCheckedModeBanner: false,
-        home: Hoodie());
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CounterProvider())
+      ],
+      child: MaterialApp(
+          theme: ThemeData(fontFamily: "Baloo"),
+          debugShowCheckedModeBanner: false,
+          home: NewCounterScreen()),
+    );
   }
 }
 // jckd j 
