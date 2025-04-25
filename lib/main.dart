@@ -1,6 +1,8 @@
 import 'package:demoo/controller/provider/counter_provider.dart';
 import 'package:demoo/view/Todo2_screen.dart';
+import 'package:demoo/view/blog_screen.dart';
 import 'package:demoo/view/colo_screen.dart';
+import 'package:demoo/view/contact_screen.dart';
 import 'package:demoo/view/count_screen.dart';
 import 'package:demoo/view/counter.dart';
 
@@ -19,6 +21,9 @@ import 'package:demoo/view/landing_screen.dart';
 import 'package:demoo/view/listview_screen.dart';
 import 'package:demoo/view/login_screen.dart';
 import 'package:demoo/view/new_counter_screen.dart';
+import 'package:demoo/view/port_screen.dart';
+import 'package:demoo/view/project_screen.dart';
+import 'package:demoo/view/resume_screen.dart';
 import 'package:demoo/view/todo_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -41,7 +46,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "Baloo"),
           debugShowCheckedModeBanner: false,
-          home: NewCounterScreen()),
+          home: ProjectScreen()),
     );
   }
 }
