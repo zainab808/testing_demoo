@@ -1,7 +1,9 @@
+import 'package:demoo/view/application_screen.dart';
 import 'package:demoo/view/blog_screen.dart';
 import 'package:demoo/view/contact_screen.dart';
 import 'package:demoo/view/project_screen.dart';
 import 'package:demoo/view/resume_screen.dart';
+import 'package:demoo/view/web_dev_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 
@@ -467,38 +469,74 @@ class Web2Screen extends StatelessWidget {
                                       // SizedBox(
                                       //   width: 25,
                                       // ),
-                                      Text(
-                                        "All",
-                                        style: TextStyle(
-                                            color: Colors.grey[300],
-                                            fontSize: 18),
+                                      InkWell(
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      ProjectScreen()));
+                                        },
+                                        child: Text(
+                                          "All",
+                                          style: TextStyle(
+                                              color: Colors.grey[300],
+                                              fontSize: 18),
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 25,
                                       ),
-                                      Text(
-                                        "Web design",
-                                        style: TextStyle(
-                                            color: Colors.grey[300],
-                                            fontSize: 18),
+                                      InkWell(
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      Web2Screen()));
+                                        },
+                                        child: Text(
+                                          "Web design",
+                                          style: TextStyle(
+                                              color: Colors.grey[300],
+                                              fontSize: 18),
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 25,
                                       ),
-                                      Text(
-                                        "Applications",
-                                        style: TextStyle(
-                                            color: Colors.grey[300],
-                                            fontSize: 18),
+                                      InkWell(
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      ApplicationScreen()));
+                                        },
+                                        child: Text(
+                                          "Applications",
+                                          style: TextStyle(
+                                              color: Colors.grey[300],
+                                              fontSize: 18),
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 25,
                                       ),
-                                      Text(
-                                        "Web development",
-                                        style: TextStyle(
-                                            color: Colors.grey[300],
-                                            fontSize: 18),
+                                      InkWell(
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (_) =>
+                                                      WebDevScreen()));
+                                        },
+                                        child: Text(
+                                          "Web development",
+                                          style: TextStyle(
+                                              color: Colors.grey[300],
+                                              fontSize: 18),
+                                        ),
                                       ),
                                     ],
                                   ),

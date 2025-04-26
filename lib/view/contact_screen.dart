@@ -561,7 +561,7 @@ class ContactScreen extends StatelessWidget {
                                       cursorWidth: 1,
                                       decoration: InputDecoration(
                                         hintText:
-                                            "your Message", // Pass your hint here
+                                            "Your Message", // Pass your hint here
                                         hintStyle: TextStyle(
                                           color: Color(0xff757575),
                                         ), // Hint text color (grey)

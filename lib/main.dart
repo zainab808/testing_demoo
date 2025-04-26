@@ -28,6 +28,7 @@ import 'package:demoo/view/project_screen.dart';
 import 'package:demoo/view/resume_screen.dart';
 import 'package:demoo/view/todo_screen.dart';
 import 'package:demoo/view/web2_screen.dart';
+import 'package:demoo/view/web_dev_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "Baloo"),
           debugShowCheckedModeBanner: false,
-          home: ApplicationScreen()),
+          home: WebDevScreen()),
     );
   }
 }
