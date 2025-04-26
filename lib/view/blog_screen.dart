@@ -344,11 +344,11 @@ class BlogScreen extends StatelessWidget {
                                   height: 10,
                                 ),
                                 SizedBox(
-                                  width: 150,
+                                  width: 219,
                                 ),
                                 Container(
                                   height: 70,
-                                  width: 567,
+                                  width: 565,
                                   decoration: BoxDecoration(
                                       border: Border.all(
                                           color: Colors.white.withOpacity(0.2)),

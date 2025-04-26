@@ -317,7 +317,7 @@ class ContactScreen extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        height: 740,
+                        height: 900,
                         width: 890,
                         decoration: BoxDecoration(
                             color: Color(0xff202021),
@@ -461,6 +461,9 @@ class ContactScreen extends StatelessWidget {
                                     height: 370,
                                     width: 850,
                                     decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: AssetImage("flower/map.jpg"),
+                                            fit: BoxFit.cover),
                                         color: Color(0xff202021),
                                         border: Border.all(
                                             color:
@@ -502,7 +505,7 @@ class ContactScreen extends StatelessWidget {
                                           decoration: InputDecoration(
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                                    color: Colors.grey)),
+                                                    color: Colors.red)),
                                             //                                       focusedBorder: OutlineInputBorder(
                                             // borderSide: BorderSide(color: Colors.green, width: 2),
                                             // border: InputBorder.none,
@@ -527,7 +530,7 @@ class ContactScreen extends StatelessWidget {
                                           decoration: InputDecoration(
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                                    color: Colors.grey)),
+                                                    color: Colors.red)),
                                             //                                       focusedBorder: OutlineInputBorder(
                                             // borderSide: BorderSide(color: Colors.green, width: 2),
                                             // border: InputBorder.none,
@@ -545,31 +548,60 @@ class ContactScreen extends StatelessWidget {
                                   SizedBox(
                                     height: 20,
                                   ),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        height: 60,
-                                        width: 830,
-                                        decoration: const BoxDecoration(),
-                                        child: TextField(
-                                          cursorColor: Colors.grey,
-                                          decoration: InputDecoration(
-                                            focusedBorder: OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    color: Colors.grey)),
-                                            //                                       focusedBorder: OutlineInputBorder(
-                                            // borderSide: BorderSide(color: Colors.green, width: 2),
-                                            // border: InputBorder.none,
-                                            border: OutlineInputBorder(),
-                                            hintText: "Your Message",
-                                            hintStyle: TextStyle(
-                                                color: Colors.grey[400]),
-                                            filled: true,
-                                            fillColor: Color(0xff202021),
+                                  Container(
+                                    height: 120.0, // Pass custom height here
+                                    width: double
+                                        .infinity, // Pass custom width here
+                                    child: TextField(
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ), // User text color
+                                      cursorColor: Colors.white,
+                                      cursorHeight: 20,
+                                      cursorWidth: 1,
+                                      decoration: InputDecoration(
+                                        hintText:
+                                            "your Message", // Pass your hint here
+                                        hintStyle: TextStyle(
+                                          color: Color(0xff757575),
+                                        ), // Hint text color (grey)
+                                        contentPadding: EdgeInsets.symmetric(
+                                          horizontal: 30,
+                                          vertical: 130,
+                                        ), // Hint starts from top-left
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xff373737),
+                                          ), // Default (grey)
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffB84C4C),
+                                          ), // Red on focus
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xffFFDB70),
+                                          ), // Yellow while typing (if using validation)
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                        ),
+
+                                        border: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0xff373737),
                                           ),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
                                       ),
-                                    ],
+                                    ),
                                   ),
                                   // MaterialButton(
                                   //   onPressed: () {},
