@@ -1,6 +1,5 @@
 import 'package:demoo/controller/provider/counter_provider.dart';
 import 'package:demoo/view/Todo2_screen.dart';
-import 'package:demoo/view/about_screen.dart';
 import 'package:demoo/view/application_screen.dart';
 import 'package:demoo/view/blog_screen.dart';
 import 'package:demoo/view/colo_screen.dart';
@@ -50,7 +49,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "Baloo"),
           debugShowCheckedModeBanner: false,
-          home: WebDevScreen()),
+          home: ProjectScreen()),
     );
   }
 }

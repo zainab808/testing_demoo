@@ -1,3 +1,4 @@
+import 'package:demoo/components/custom_text.dart';
 import 'package:demoo/view/blog_screen.dart';
 import 'package:demoo/view/port_screen.dart';
 import 'package:demoo/view/project_screen.dart';
@@ -603,6 +604,59 @@ class ContactScreen extends StatelessWidget {
                                       ),
                                     ),
                                   ),
+
+                                  SizedBox(
+                                    height: 20,
+                                  ),
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      InkWell(
+                                        onTap: () {},
+                                        child: Container(
+                                          height: 50,
+                                          width: 200,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              color: Color.fromARGB(
+                                                255,
+                                                81,
+                                                81,
+                                                83,
+                                              ),
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                              10,
+                                            ),
+                                            // color: Colors.amber,
+                                          ),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              Icon(
+                                                Icons.send_rounded,
+                                                color: Color(0xffEFCE6A),
+                                              ),
+                                              CustomText(
+                                                text: "Send Message",
+                                                fweight: FontWeight.bold,
+                                                fontsize: 15,
+                                                color: Color.fromARGB(
+                                                  255,
+                                                  143,
+                                                  120,
+                                                  50,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+
                                   // MaterialButton(
                                   //   onPressed: () {},
                                   //   child: Icon(
