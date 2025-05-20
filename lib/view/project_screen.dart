@@ -3,9 +3,10 @@ import 'package:demoo/view/contact_screen.dart';
 import 'package:demoo/view/port_screen.dart';
 import 'package:demoo/view/resume_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:vs_scrollbar/vs_scrollbar.dart';
 
 class ProjectScreen extends StatelessWidget {
-  const ProjectScreen({super.key});
+  ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -783,37 +784,136 @@ class ProjectScreen extends StatelessWidget {
                                     child: Container(
                                       height: 250,
                                       // color: Colors.amber,
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            padding: EdgeInsets.all(10),
-                                            height: 140,
-                                            width: 410,
-                                            decoration: BoxDecoration(
-                                                color: Color(0xff212123),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                border: Border.all(
-                                                    color: Colors.white
-                                                        .withOpacity(0.2))),
-                                            child: Stack(
-                                              clipBehavior: Clip.none,
-                                              children: [
-                                                Positioned(
-                                                  top: -50,
-                                                  right: 280,
-                                                  child: Row(
-                                                    children: [
-                                                      Container(
-                                                        height: 86,
-                                                        width: 86,
-                                                        child: Container(
+                                      child: VsScrollbar(
+                                        controller: _scrollController,
+                                        showTrackOnHover: true, // default false
+                                        isAlwaysShown: true, // default false
+                                        scrollbarFadeDuration: Duration(
+                                            milliseconds:
+                                                500), // default : Duration(milliseconds: 300)
+                                        scrollbarTimeToFade: Duration(
+                                            milliseconds:
+                                                800), // default : Duration(milliseconds: 600)
+                                        style: VsScrollbarStyle(
+                                          hoverThickness: 10.0, // default 12.0
+                                          radius: Radius.circular(
+                                              10), // default Radius.circular(8.0)
+                                          thickness: 10.0, // [ default 8.0 ]
+                                          color: Colors.yellow
+                                              .shade900, // default ColorScheme Theme
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Container(
+                                              padding: EdgeInsets.all(10),
+                                              height: 140,
+                                              width: 410,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xff212123),
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  border: Border.all(
+                                                      color: Colors.white
+                                                          .withOpacity(0.2))),
+                                              child: Stack(
+                                                clipBehavior: Clip.none,
+                                                children: [
+                                                  Positioned(
+                                                    top: -50,
+                                                    right: 280,
+                                                    child: Row(
+                                                      children: [
+                                                        Container(
                                                           height: 86,
                                                           width: 86,
+                                                          child: Container(
+                                                            height: 86,
+                                                            width: 86,
+                                                            decoration: BoxDecoration(
+                                                                image: DecorationImage(
+                                                                    image: AssetImage(
+                                                                        "flower/client.jpg")),
+                                                                color: Color(
+                                                                    0xff363636),
+                                                                border: Border.all(
+                                                                    color: Colors
+                                                                        .white
+                                                                        .withOpacity(
+                                                                            0.2)),
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            15)),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 10,
+                                                    right: 150,
+                                                    child: Text(
+                                                      "Daniel Lewis",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 22,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 45,
+                                                    right: 55,
+                                                    child: Text(
+                                                      "Richard was hired to create a corporate   ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 70,
+                                                    child: Text(
+                                                      "  identity. We were very pleased with the work... ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.all(10),
+                                              height: 140,
+                                              width: 410,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xff212123),
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  border: Border.all(
+                                                      color: Colors.white
+                                                          .withOpacity(0.2))),
+                                              child: Stack(
+                                                clipBehavior: Clip.none,
+                                                children: [
+                                                  Positioned(
+                                                    top: -50,
+                                                    right: 280,
+                                                    child: Row(
+                                                      children: [
+                                                        Container(
+                                                          height: 85,
+                                                          width: 85,
                                                           decoration: BoxDecoration(
                                                               image: DecorationImage(
                                                                   image: AssetImage(
-                                                                      "flower/client.jpg")),
+                                                                      "flower/client 2.jpg")),
                                                               color: Color(
                                                                   0xff363636),
                                                               border: Border.all(
@@ -826,287 +926,207 @@ class ProjectScreen extends StatelessWidget {
                                                                       .circular(
                                                                           15)),
                                                         ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 10,
+                                                    right: 140,
+                                                    child: Text(
+                                                      "Jessica Miller",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 22,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 45,
+                                                    right: 55,
+                                                    child: Text(
+                                                      "Richard was hired to create a corporate   ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
                                                       ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 10,
-                                                  right: 150,
-                                                  child: Text(
-                                                    "Daniel Lewis",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 22,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 45,
-                                                  right: 55,
-                                                  child: Text(
-                                                    "Richard was hired to create a corporate   ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
                                                     ),
                                                   ),
-                                                ),
-                                                Positioned(
-                                                  top: 70,
-                                                  child: Text(
-                                                    "  identity. We were very pleased with the work... ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
-                                                    ),
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Container(
-                                            padding: EdgeInsets.all(10),
-                                            height: 140,
-                                            width: 410,
-                                            decoration: BoxDecoration(
-                                                color: Color(0xff212123),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                border: Border.all(
-                                                    color: Colors.white
-                                                        .withOpacity(0.2))),
-                                            child: Stack(
-                                              clipBehavior: Clip.none,
-                                              children: [
-                                                Positioned(
-                                                  top: -50,
-                                                  right: 280,
-                                                  child: Row(
-                                                    children: [
-                                                      Container(
-                                                        height: 85,
-                                                        width: 85,
-                                                        decoration: BoxDecoration(
-                                                            image: DecorationImage(
-                                                                image: AssetImage(
-                                                                    "flower/client 2.jpg")),
-                                                            color: Color(
-                                                                0xff363636),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .white
-                                                                    .withOpacity(
-                                                                        0.2)),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        15)),
+                                                  Positioned(
+                                                    top: 70,
+                                                    child: Text(
+                                                      "  identity. We were very pleased with the work... ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
                                                       ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 10,
-                                                  right: 140,
-                                                  child: Text(
-                                                    "Jessica Miller",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 22,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 45,
-                                                  right: 55,
-                                                  child: Text(
-                                                    "Richard was hired to create a corporate   ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
                                                     ),
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 70,
-                                                  child: Text(
-                                                    "  identity. We were very pleased with the work... ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
-                                                    ),
-                                                  ),
-                                                )
-                                              ],
+                                                  )
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Container(
-                                            padding: EdgeInsets.all(10),
-                                            height: 140,
-                                            width: 410,
-                                            decoration: BoxDecoration(
-                                                color: Color(0xff212123),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                border: Border.all(
-                                                    color: Colors.white
-                                                        .withOpacity(0.2))),
-                                            child: Stack(
-                                              clipBehavior: Clip.none,
-                                              children: [
-                                                Positioned(
-                                                  top: -50,
-                                                  right: 280,
-                                                  child: Row(
-                                                    children: [
-                                                      Container(
-                                                        height: 85,
-                                                        width: 85,
-                                                        decoration: BoxDecoration(
-                                                            image: DecorationImage(
-                                                                image: AssetImage(
-                                                                    "flower/client 3.jpg")),
-                                                            color: Color(
-                                                                0xff363636),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .white
-                                                                    .withOpacity(
-                                                                        0.2)),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        15)),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.all(10),
+                                              height: 140,
+                                              width: 410,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xff212123),
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  border: Border.all(
+                                                      color: Colors.white
+                                                          .withOpacity(0.2))),
+                                              child: Stack(
+                                                clipBehavior: Clip.none,
+                                                children: [
+                                                  Positioned(
+                                                    top: -50,
+                                                    right: 280,
+                                                    child: Row(
+                                                      children: [
+                                                        Container(
+                                                          height: 85,
+                                                          width: 85,
+                                                          decoration: BoxDecoration(
+                                                              image: DecorationImage(
+                                                                  image: AssetImage(
+                                                                      "flower/client 3.jpg")),
+                                                              color: Color(
+                                                                  0xff363636),
+                                                              border: Border.all(
+                                                                  color: Colors
+                                                                      .white
+                                                                      .withOpacity(
+                                                                          0.2)),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          15)),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 10,
+                                                    right: 150,
+                                                    child: Text(
+                                                      "Emily Evans",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 22,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 45,
+                                                    right: 55,
+                                                    child: Text(
+                                                      "Richard was hired to create a corporate   ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
                                                       ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 10,
-                                                  right: 150,
-                                                  child: Text(
-                                                    "Emily Evans",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 22,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 45,
-                                                  right: 55,
-                                                  child: Text(
-                                                    "Richard was hired to create a corporate   ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
                                                     ),
                                                   ),
-                                                ),
-                                                Positioned(
-                                                  top: 70,
-                                                  child: Text(
-                                                    "  identity. We were very pleased with the work... ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
-                                                    ),
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Container(
-                                            padding: EdgeInsets.all(10),
-                                            height: 140,
-                                            width: 410,
-                                            decoration: BoxDecoration(
-                                                color: Color(0xff212123),
-                                                borderRadius:
-                                                    BorderRadius.circular(20),
-                                                border: Border.all(
-                                                    color: Colors.white
-                                                        .withOpacity(0.2))),
-                                            child: Stack(
-                                              clipBehavior: Clip.none,
-                                              children: [
-                                                Positioned(
-                                                  top: -50,
-                                                  right: 280,
-                                                  child: Row(
-                                                    children: [
-                                                      Container(
-                                                        height: 85,
-                                                        width: 85,
-                                                        decoration: BoxDecoration(
-                                                            image: DecorationImage(
-                                                                image: AssetImage(
-                                                                    "flower/client 4.jpg")),
-                                                            color: Color(
-                                                                0xff363636),
-                                                            border: Border.all(
-                                                                color: Colors
-                                                                    .white
-                                                                    .withOpacity(
-                                                                        0.2)),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        15)),
+                                                  Positioned(
+                                                    top: 70,
+                                                    child: Text(
+                                                      "  identity. We were very pleased with the work... ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
                                                       ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 10,
-                                                  right: 140,
-                                                  child: Text(
-                                                    "Henry William",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 22,
-                                                        fontWeight:
-                                                            FontWeight.bold),
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 45,
-                                                  right: 55,
-                                                  child: Text(
-                                                    "Richard was hired to create a corporate   ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
                                                     ),
-                                                  ),
-                                                ),
-                                                Positioned(
-                                                  top: 70,
-                                                  child: Text(
-                                                    "  identity. We were very pleased with the work... ",
-                                                    style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 18,
-                                                    ),
-                                                  ),
-                                                )
-                                              ],
+                                                  )
+                                                ],
+                                              ),
                                             ),
-                                          )
-                                        ],
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.all(10),
+                                              height: 140,
+                                              width: 410,
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xff212123),
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                  border: Border.all(
+                                                      color: Colors.white
+                                                          .withOpacity(0.2))),
+                                              child: Stack(
+                                                clipBehavior: Clip.none,
+                                                children: [
+                                                  Positioned(
+                                                    top: -50,
+                                                    right: 280,
+                                                    child: Row(
+                                                      children: [
+                                                        Container(
+                                                          height: 85,
+                                                          width: 85,
+                                                          decoration: BoxDecoration(
+                                                              image: DecorationImage(
+                                                                  image: AssetImage(
+                                                                      "flower/client 4.jpg")),
+                                                              color: Color(
+                                                                  0xff363636),
+                                                              border: Border.all(
+                                                                  color: Colors
+                                                                      .white
+                                                                      .withOpacity(
+                                                                          0.2)),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          15)),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 10,
+                                                    right: 140,
+                                                    child: Text(
+                                                      "Henry William",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 22,
+                                                          fontWeight:
+                                                              FontWeight.bold),
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 45,
+                                                    right: 55,
+                                                    child: Text(
+                                                      "Richard was hired to create a corporate   ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Positioned(
+                                                    top: 70,
+                                                    child: Text(
+                                                      "  identity. We were very pleased with the work... ",
+                                                      style: TextStyle(
+                                                        color: Colors.grey[400],
+                                                        fontSize: 18,
+                                                      ),
+                                                    ),
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),

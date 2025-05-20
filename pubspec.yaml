@@ -38,7 +38,7 @@ dependencies:
   carousel_slider: ^5.0.0
   shared_preferences: any
   provider: ^6.1.4
-  
+  vs_scrollbar: ^1.0.0
  
 
   
@@ -96,9 +96,11 @@ flutter:
     - family: Static
       fonts:
         - asset: fonts/static.ttf  
-    - family: Itel
+    - family: S
       fonts:
-        - asset: fonts/itel.ttf                               
+        - asset: fonts/s.ttf 
+          
+                                
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
