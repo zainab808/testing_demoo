@@ -39,7 +39,7 @@ dependencies:
   shared_preferences: any
   provider: ^6.1.4
   vs_scrollbar: ^1.0.0
- 
+  pdf: ^3.11.3  
 
   
 

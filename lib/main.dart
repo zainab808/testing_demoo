@@ -7,7 +7,7 @@ import 'package:demoo/view/contact_screen.dart';
 import 'package:demoo/view/count_screen.dart';
 import 'package:demoo/view/counter.dart';
 
-import 'package:demoo/view/daraz.dart';
+import 'package:demoo/view/daraz.dart';         
 import 'package:demoo/view/design.dart';
 import 'package:demoo/view/design_screen.dart';
 import 'package:demoo/view/first_screen.dart';
