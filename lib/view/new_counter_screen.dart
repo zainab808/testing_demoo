@@ -34,7 +34,7 @@ class NewCounterScreen extends StatelessWidget {
           return Text(
             p.count.toString(),
             style: TextStyle(
-                color: const Color.fromARGB(255, 117, 10, 2),
+                color: p.count >=5?Colors.amber:const Color.fromARGB(255, 117, 10, 2),
                 fontSize: 200,
                 fontWeight: FontWeight.bold),
           );

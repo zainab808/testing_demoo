@@ -1,4 +1,6 @@
 import 'package:demoo/controller/provider/counter_provider.dart';
+import 'package:demoo/controller/provider/gridview_provider.dart';
+import 'package:demoo/controller/provider/weather_provider.dart';
 import 'package:demoo/view/Todo2_screen.dart';
 import 'package:demoo/view/application_screen.dart';
 import 'package:demoo/view/blog_screen.dart';
@@ -12,6 +14,7 @@ import 'package:demoo/view/design.dart';
 import 'package:demoo/view/design_screen.dart';
 import 'package:demoo/view/first_screen.dart';
 import 'package:demoo/view/green.dart';
+import 'package:demoo/view/gridview_screen.dart';
 import 'package:demoo/view/home_screen.dart';
 import 'package:demoo/view/hoodie.dart';
 import 'package:demoo/view/hoodie_screen.dart';
@@ -28,6 +31,7 @@ import 'package:demoo/view/project_screen.dart';
 import 'package:demoo/view/resume_screen.dart';
 import 'package:demoo/view/table_screen.dart';
 import 'package:demoo/view/todo_screen.dart';
+import 'package:demoo/view/weather_screen.dart';
 import 'package:demoo/view/web2_screen.dart';
 import 'package:demoo/view/web_dev_screen.dart';
 
@@ -46,12 +50,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => CounterProvider())
+        ChangeNotifierProvider(create: (context) => CounterProvider()),
+        ChangeNotifierProvider(create: (context) => GridviewProvider()),
+         ChangeNotifierProvider(create: (context) => WeatherProvider())
       ],
       child: MaterialApp(
-          theme: ThemeData(fontFamily: "Baloo"),
+          theme: ThemeData(fontFamily: "voll"),
           debugShowCheckedModeBanner: false,
-          home: ProjectScreen()),
+          home: WeatherScreen()),
     );
   }
 }
