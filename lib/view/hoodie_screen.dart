@@ -1,15 +1,35 @@
+import 'package:demoo/controller/provider/daraz_provider.dart';
 import 'package:demoo/view/hoodie.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:provider/provider.dart';
 
-class Hoodie extends StatelessWidget {
+class Hoodie extends StatefulWidget {
   const Hoodie({super.key});
 
+  
+
   @override
+  State<Hoodie> createState() => _HoodieState();
+}
+
+class _HoodieState extends State<Hoodie> {
+
+  @override
+  void initState() {
+    
+    super.initState();
+    var p =context.read<DarazProvider>();
+    p.getproduct();
+    
+  }
+  @override
+
+  
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
+      backgroundColor: Colors.grey[200],
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -182,110 +202,150 @@ class Hoodie extends StatelessWidget {
                         width: 40,
                       ),
                       Expanded(
-                        child: GridView.builder(
-                            itemCount: 12,
-                            shrinkWrap: true,
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 6,
-                                    childAspectRatio: 0.6,
-                                    mainAxisSpacing: 15,
-                                    crossAxisSpacing: 5),
-                            itemBuilder: (context, index) {
-                              return Card(
-                                child: Container(
-                                  color: Colors.white,
-                                  child: Column(
-                                    children: [
-                                      Image.network(
-                                          "https://img.drz.lazcdn.com/static/pk/p/de6e167bbd791ed8970d389c0e46a9d6.jpg_200x200q80.jpg_.webp"),
-                                      const SizedBox(
-                                        height: 15,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.all(5.0),
-                                        child: Column(
-                                          children: [
-                                            Text(
-                                              "Heartbeat Logo Print Winter Track Suit Hoodie And Trouser",
-                                              maxLines: 2,
-                                              style: TextStyle(
-                                                overflow: TextOverflow.ellipsis,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            Row(
+                        child: Builder(
+                          builder: (context) {
+
+                         var provider= context.watch<DarazProvider>();
+                            return GridView.builder(
+                                itemCount: provider.products!.length,
+                                shrinkWrap: true,
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                        crossAxisCount: 6,
+                                        childAspectRatio: 0.5,
+                                        mainAxisSpacing: 15,
+                                        crossAxisSpacing: 5),
+                                itemBuilder: (context, index) {
+                                  
+                                  return Card(
+                                    child: Container(
+                                      color: Colors.white,
+                                      child: Column(
+                                        children: [
+                                          Image.network(
+                                              provider.products![index].image,height: 220,width: 130,),
+                                           SizedBox(
+                                            height: 15,
+                                          ),
+                                           Padding(
+                                            padding: EdgeInsets.all(5.0),
+                                            child: Column(
                                               children: [
-                                                Text(
-                                                  "RS. 1,233",
+                                                Text(provider.products![index].title
+                                                  ,
+                                                  maxLines: 2,
                                                   style: TextStyle(
-                                                      color: Colors.deepOrange,
-                                                      fontSize: 20),
+                                                    overflow: TextOverflow.ellipsis,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
                                                 ),
                                                 SizedBox(
-                                                  width: 10,
+                                                  height: 5,
                                                 ),
-                                                Text(
-                                                  "RS. -59%",
-                                                  style:
-                                                      TextStyle(fontSize: 14),
-                                                )
-                                              ],
-                                            ),
-                                            Row(
-                                              children: [],
-                                            ),
-                                            SizedBox(
-                                              height: 3,
-                                            ),
-                                            Row(
-                                              children: [
-                                                Icon(
-                                                  Icons.star,
-                                                  color: Colors.amber,
-                                                  size: 15,
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                     provider.products![index].price.toString(),
+                                                      style: TextStyle(
+                                                          color: Colors.deepOrange,
+                                                          fontSize: 20),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 10,
+                                                    ),
+                                                    Text(
+                                                      "RS. -59%",
+                                                      style:
+                                                          TextStyle(fontSize: 14),
+                                                    )
+                                                  ],
                                                 ),
-                                                Icon(
-                                                  Icons.star,
-                                                  size: 15,
-                                                  color: Colors.amber,
-                                                ),
-                                                Icon(
-                                                  Icons.star,
-                                                  color: Colors.amber,
-                                                  size: 15,
-                                                ),
-                                                Icon(
-                                                  Icons.star,
-                                                  color: Colors.amber,
-                                                  size: 15,
-                                                ),
-                                                Icon(
-                                                  Icons.star,
-                                                  color: Colors.amber,
-                                                  size: 15,
-                                                ),
+
+
                                                 SizedBox(
-                                                  width: 5,
+                                                  height: 5,
                                                 ),
-                                                Text(
-                                                  "(137)",
-                                                  style: TextStyle(
-                                                      color: Colors.grey),
-                                                ),
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                         provider.products![index].category.toString(),
+                                                          style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontSize: 12),
+                                                        ),
+                                                    ],
+                                                  ),
+
+                                                    Row(
+                                                      children: [
+                                                        Text(
+                                                         provider.products![index].rating.rate.toString(),
+                                                          style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontSize: 20),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  
+
+
+                                              
+                                                // Row(
+                                                //   children: [],
+                                                // ),
+                                                // SizedBox(
+                                                //   height: 3,
+                                                // ),
+                                                // Row(
+                                                //   children: [
+                                                //     Icon(
+                                                //       Icons.star,
+                                                //       color: Colors.amber,
+                                                //       size: 15,
+                                                //     ),
+                                                //     Icon(
+                                                //       Icons.star,
+                                                //       size: 15,
+                                                //       color: Colors.amber,
+                                                //     ),
+                                                //     Icon(
+                                                //       Icons.star,
+                                                //       color: Colors.amber,
+                                                //       size: 15,
+                                                //     ),
+                                                //     Icon(
+                                                //       Icons.star,
+                                                //       color: Colors.amber,
+                                                //       size: 15,
+                                                //     ),
+                                                //     Icon(
+                                                //       Icons.star,
+                                                //       color: Colors.amber,
+                                                //       size: 15,
+                                                //     ),
+                                                //     SizedBox(
+                                                //       width: 5,
+                                                //     ),
+                                                //     Text(
+                                                //       "(137)",
+                                                //       style: TextStyle(
+                                                //           color: Colors.grey),
+                                                //     ),
+                                                //   ],
+                                                // )
+
+
+
                                               ],
-                                            )
-                                          ],
-                                        ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            }),
+                                    ),
+                                  );
+                                });
+                          }
+                        ),
                       ),
                       const SizedBox(
                         width: 85,

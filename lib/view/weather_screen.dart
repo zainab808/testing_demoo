@@ -42,11 +42,13 @@ class WeatherScreen extends StatelessWidget {
                       return  Column(
                         children: [
                           TextField(
+                            cursorColor: Colors.white,
                             controller: p.controller,
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18),
+                                
                             decoration: InputDecoration(
                                 focusedBorder: (OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(20),
