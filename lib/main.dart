@@ -36,6 +36,7 @@ import 'package:demoo/view/portfolio_screen.dart';
 import 'package:demoo/view/project_screen.dart';
 import 'package:demoo/view/resume_screen.dart';
 import 'package:demoo/view/table_screen.dart';
+import 'package:demoo/view/todo3_screen.dart';
 import 'package:demoo/view/todo_screen.dart';
 import 'package:demoo/view/weather_screen.dart';
 import 'package:demoo/view/web2_screen.dart';
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "voll"),
           debugShowCheckedModeBanner: false,
-          home: Insta3Screen()),
+          home: Todo2Screen()),
     );
   }
 }
