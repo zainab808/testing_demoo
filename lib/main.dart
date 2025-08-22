@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "voll"),
           debugShowCheckedModeBanner: false,
-          home: portfolioscreen()),
+          home: InstaScreen()),
     );
   }
 }
