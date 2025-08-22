@@ -1,4 +1,5 @@
 import 'package:demoo/controller/provider/chatbot_provider.dart';
+import 'package:demoo/view/chatbot_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,32 @@ class ChatbotScreen extends StatelessWidget {
                 SingleChildScrollView(
                   child: Column(
                   children: [
-                    // Image.asset("flower/flo.jpeg"),
+
+
+
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                       
+                      
+                      
+                          InkWell(
+                            onTap: (){
+                                Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ChatbotImage()), // Chatbot wali screen
+                          );
+                            },
+                            
+                            child: Icon(Icons.arrow_back,size: 30,color: Colors.white,)),
+                          Image.asset("flower/zechat.png",height: 120,width: 200,),
+                      
+                          Icon(Icons.more_horiz,size: 30,color: Colors.white,)
+                        ],
+                      ),
+                    ),
                     TextField(
                       style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w600),
                                

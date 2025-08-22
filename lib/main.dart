@@ -6,6 +6,7 @@ import 'package:demoo/controller/provider/weather_provider.dart';
 import 'package:demoo/view/Todo2_screen.dart';
 import 'package:demoo/view/application_screen.dart';
 import 'package:demoo/view/blog_screen.dart';
+import 'package:demoo/view/chatbot_image.dart';
 import 'package:demoo/view/chatbot_screen.dart';
 import 'package:demoo/view/colo_screen.dart';
 import 'package:demoo/view/contact_screen.dart';
@@ -67,7 +68,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "voll"),
           debugShowCheckedModeBanner: false,
-          home: Todo2Screen()),
+          home: ChatbotImage()),
     );
   }
 }
