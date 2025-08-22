@@ -24,6 +24,7 @@ import 'package:demoo/view/hoodie.dart';
 import 'package:demoo/view/hoodie_screen.dart';
 import 'package:demoo/view/insta2_screen.dart';
 import 'package:demoo/view/insta3_screen.dart';
+import 'package:demoo/view/insta4_screen.dart';
 import 'package:demoo/view/insta_screen.dart';
 import 'package:demoo/view/landing_screen.dart';
 import 'package:demoo/view/listview_screen.dart';
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(fontFamily: "voll"),
           debugShowCheckedModeBanner: false,
-          home: InstaScreen()),
+          home: Insta3Screen()),
     );
   }
 }
