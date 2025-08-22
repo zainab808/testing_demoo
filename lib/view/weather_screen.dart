@@ -104,24 +104,20 @@ class WeatherScreen extends StatelessWidget {
                           Image.asset(
                             "flower/cloud.png",
                           ),
+                          // SizedBox(
+                          //   width: 80,
+                          // ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(
-                                width: 80,
+                              Text(
+                             " ${((p.weatherData!.main.temp)-273.15).round()}°",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 100,
+                                    fontWeight: FontWeight.bold),
                               ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                 " ${((p.weatherData!.main.temp)-273.15).round()}°",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 100,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                
-                                ],
-                              ),
+                            
                             ],
                           ),
                           Text(
