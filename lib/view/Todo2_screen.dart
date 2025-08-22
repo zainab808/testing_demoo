@@ -183,135 +183,139 @@ class _Todo2ScreenState extends State<Todo2Screen> {
       backgroundColor: const Color(0xff1E1330),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Column(
-          children: [
-            const Row(
-              children: [
-                Text(
-                  "TODO LIST",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
-                ),
-                Spacer(),
-                Icon(
-                  Icons.more_vert,
-                  size: 30,
-                  color: Colors.white,
-                )
-              ],
-            ),
-            HSize(
-              height: 30,
-            ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            todolist.isEmpty
-                ? const Text("No Todo List Yet!",
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const Row(
+                children: [
+                  Text(
+                    "TODO LIST",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold))
-                : ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: todolist.length,
-                    itemBuilder: (context, index) {
-                      return Column(
-                        children: [
-                          Row(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(),
+                  Icon(
+                    Icons.more_vert,
+                    size: 30,
+                    color: Colors.white,
+                  )
+                ],
+              ),
+              HSize(
+                height: 30,
+              ),
+              // const SizedBox(
+              //   height: 20,
+              // ),
+              todolist.isEmpty
+                  ? const Text("No Todo List Yet!",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold))
+                  : ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: todolist.length,
+                      itemBuilder: (context, index) {
+                        return SingleChildScrollView(
+                          child: Column(
                             children: [
-                              Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10, vertical: 5),
-                                  margin: const EdgeInsets.symmetric(
-                                      horizontal: 5, vertical: 7),
-                                  height: 50,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    color: const Color(0xff2C2242),
-                                    // color: Colors.grey.withOpacity(0.3),
-                                  ),
-                                  child: Center(
-                                      child: Text(
-                                    "${index + 1}",
-                                    style: const TextStyle(
-                                        color: Colors.white, fontSize: 15),
-                                  ))),
-                              const SizedBox(
-                                width: 5,
-                              ),
-                              Expanded(
-                                child: Container(
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8),
-                                    color: const Color(0xff2C2242),
-                                    // color: Colors.grey.withOpacity(0.3),
-                                  ),
-                                  child: Row(
-                                    children: [
-                                      const SizedBox(
-                                        width: 10,
+                              Row(
+                                children: [
+                                  Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10, vertical: 5),
+                                      margin: const EdgeInsets.symmetric(
+                                          horizontal: 5, vertical: 7),
+                                      height: 50,
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: const Color(0xff2C2242),
+                                        // color: Colors.grey.withOpacity(0.3),
                                       ),
-                                      Text(
-                                        todolist[index],
+                                      child: Center(
+                                          child: Text(
+                                        "${index + 1}",
                                         style: const TextStyle(
-                                            color: Colors.white),
-                                      ),
-                                      const Spacer(),
-                                      MaterialButton(
-                                        onPressed: () {
-                                          todolist.removeAt(index);
-                                          setState(() {});
-                                        },
-                                        height: 45,
-                                        minWidth: 45,
-                                        child: Icon(
-                                          Icons.delete,
-                                          color: AppColors.white,
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        width: 5,
-                                      )
-                                    ],
+                                            color: Colors.white, fontSize: 15),
+                                      ))),
+                                  const SizedBox(
+                                    width: 5,
                                   ),
-                                ),
+                                  Expanded(
+                                    child: Container(
+                                      height: 50,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        color: const Color(0xff2C2242),
+                                        // color: Colors.grey.withOpacity(0.3),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          const SizedBox(
+                                            width: 10,
+                                          ),
+                                          Text(
+                                            todolist[index],
+                                            style: const TextStyle(
+                                                color: Colors.white),
+                                          ),
+                                          const Spacer(),
+                                          MaterialButton(
+                                            onPressed: () {
+                                              todolist.removeAt(index);
+                                              setState(() {});
+                                            },
+                                            height: 45,
+                                            minWidth: 45,
+                                            child: Icon(
+                                              Icons.delete,
+                                              color: AppColors.white,
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            width: 5,
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
                               )
                             ],
-                          )
-                        ],
-                      );
-                    }),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                if (todolist.isNotEmpty)
-                  MaterialButton(
-                    onPressed: () {
-                      _showMyDialog();
-                      // todolist.clear();
-                      // setState(() {});
-                    },
-                    height: 30,
-                    minWidth: 60,
-                    child: Text(
-                      "Clear All",
-                      style: TextStyle(color: AppColors.red, fontSize: 15),
+                          ),
+                        );
+                      }),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  if (todolist.isNotEmpty)
+                    MaterialButton(
+                      onPressed: () {
+                        _showMyDialog();
+                        // todolist.clear();
+                        // setState(() {});
+                      },
+                      height: 30,
+                      minWidth: 60,
+                      child: Text(
+                        "Clear All",
+                        style: TextStyle(color: AppColors.red, fontSize: 15),
+                      ),
                     ),
-                  ),
-                const SizedBox(
-                  width: 5,
-                )
-              ],
-            )
-          ],
+                  const SizedBox(
+                    width: 5,
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
